@@ -8,7 +8,7 @@ import sys
 import time
 from asyncio import get_event_loop
 from base64 import b64decode
-from distutils.util import strtobool as sb
+from distutils.utilimport strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
 from math import ceil
 from pathlib import Path
@@ -122,7 +122,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/ramadhani892/RAM-UBOT")
+    "https://github.com/kokushibo17/ANYA2_BOT")
 
 # sudo
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
