@@ -1,7 +1,18 @@
-FROM ramadhani892/ramubot:dragons
+# Using Python Slim-Buster
+FROM xluxz/geezproject:buster
+# Lah U cp Atur atur
+# Geez-UserBot
+# RAM-UBOT minta ya
 
-RUN git clone -b master https://github.com/ramadhani892/RAM-UBOT home/master/ 
-   
-WORKDIR /home/master/
+RUN git clone -b RAM-UBOT https://github.com/kokushibo17/ANYA2_BOT/root/userbot
+RUN mkdir /root/userbot/.bin
+RUN pip install --upgrade pip setuptools
+WORKDIR /root/userbot
 
-CMD ["python3", "-m", "rams"]
+#Install python requirements
+RUN pip3 install -r https://raw.githubusercontent.com/ramadhani892/RAM-UBOT/RAM-UBOT/requirements.txt
+
+EXPOSE 80 443
+
+# Finalization
+CMD ["python3","-m","userbot"]
